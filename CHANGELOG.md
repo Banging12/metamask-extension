@@ -7,47 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [10.12.0]
-- Revert "Update SRP representation"
-- Use pre-wrap instead of pre for signature content ([#13828](https://github.com/MetaMask/metamask-extension/pull/13828))
-- Derive version suffix from build type and version ([#13895](https://github.com/MetaMask/metamask-extension/pull/13895))
-- Improvements in connectRemote function in background.js ([#13762](https://github.com/MetaMask/metamask-extension/pull/13762))
-- create branching logic for different types of contract interactions for identifying the contract address ([#13776](https://github.com/MetaMask/metamask-extension/pull/13776))
+
 ### Added
-- Feat/settings search ([#13214](https://github.com/MetaMask/metamask-extension/pull/13214))
-- Add AirGap Vault detail links ([#13650](https://github.com/MetaMask/metamask-extension/pull/13650))
+- Add a search feature to the settings page ([#13214](https://github.com/MetaMask/metamask-extension/pull/13214))
+- Add AirGap Vault detail links to the hardware wallet connection flow ([#13650](https://github.com/MetaMask/metamask-extension/pull/13650))
 
 ### Changed
-- Improve slippage input validation in Swaps ([#13914](https://github.com/MetaMask/metamask-extension/pull/13914))
-- Degrade gracefully when gas API is down ([#13865](https://github.com/MetaMask/metamask-extension/pull/13865))
-- Updating ActionableMessage to use theme colors ([#13899](https://github.com/MetaMask/metamask-extension/pull/13899))
-- Find and replace of all typography colors to design tokens ([#13885](https://github.com/MetaMask/metamask-extension/pull/13885))
-- Updating AccountList to use darkmode colors ([#13864](https://github.com/MetaMask/metamask-extension/pull/13864))
-- Typography design token color and docs update ([#13758](https://github.com/MetaMask/metamask-extension/pull/13758))
-- Update privacy page text ([#13795](https://github.com/MetaMask/metamask-extension/pull/13795))
-- Showing new message while converting token to NFT ([#13838](https://github.com/MetaMask/metamask-extension/pull/13838))
-- Add custom CSS to Popover ([#13740](https://github.com/MetaMask/metamask-extension/pull/13740))
-- Updating colors in various components js and css ([#13831](https://github.com/MetaMask/metamask-extension/pull/13831))
-- Restoring create password form layout ([#13824](https://github.com/MetaMask/metamask-extension/pull/13824))
-- Feat/13662 box design token updates ([#13725](https://github.com/MetaMask/metamask-extension/pull/13725))
-- Implement Network specific insufficient currency warning #12965 ([#13182](https://github.com/MetaMask/metamask-extension/pull/13182))
+- Prevent users from entering too long a number for slippage in swaps ([#13914](https://github.com/MetaMask/metamask-extension/pull/13914))
+- Hide non-essential information in our EIP-1559 v2 gas modal when the gas api is down ([#13865](https://github.com/MetaMask/metamask-extension/pull/13865))
+- Updating colors of the account list ([#13864](https://github.com/MetaMask/metamask-extension/pull/13864))
+- Show a more useful warning is users don't have enough of their networks base currency to pay for gas ([#13182](https://github.com/MetaMask/metamask-extension/pull/13182))
 - Update "Forgot Password?" copy  ([#13493](https://github.com/MetaMask/metamask-extension/pull/13493))
-- Confirm transaction page: use method name only for contract transactions ([#13643](https://github.com/MetaMask/metamask-extension/pull/13643))
+- Show the address of the contract that is being interacted with next to the method name in transaction confirmation headers ([#13683](https://github.com/MetaMask/metamask-extension/pull/13683))
+- Show the address of the contract that is being interacted next to 'Transfer' and 'Transfer From' method names in transaction confirmation headers ([#13776](https://github.com/MetaMask/metamask-extension/pull/13776))
 
 ### Fixed
+- Ensure long signature request text is visible ([#13828](https://github.com/MetaMask/metamask-extension/pull/13828))
 - Fix spelling of 'Ethereum' in German translation ([#13915](https://github.com/MetaMask/metamask-extension/pull/13915))
-- Fixed serialization of error parameter for `rejectPendingApproval` across JSON-RPC ([#13847](https://github.com/MetaMask/metamask-extension/pull/13847))
-- Fix permission site origin overflow ([#13868](https://github.com/MetaMask/metamask-extension/pull/13868))
-- fix small bug where max transaction fee isn't properly passed through confirmation screen flow ([#13893](https://github.com/MetaMask/metamask-extension/pull/13893))
-- fix bug in NFT dropdown state management ([#13880](https://github.com/MetaMask/metamask-extension/pull/13880))
-- Ensure only accounts list scrolls in Permissions popup ([#13859](https://github.com/MetaMask/metamask-extension/pull/13859))
-- Fix gas values display in users primary currency inside inputs ([#13830](https://github.com/MetaMask/metamask-extension/pull/13830))
-- gas fee details displayed on UI should be used gas estimates if available ([#13809](https://github.com/MetaMask/metamask-extension/pull/13809))
-- Fix currency toggle ([#13813](https://github.com/MetaMask/metamask-extension/pull/13813))
-- Confirm transaction page: show contract address details in title ([#13683](https://github.com/MetaMask/metamask-extension/pull/13683))
-- Fix token details icon when 'Use Token Detection' is enabled ([#13726](https://github.com/MetaMask/metamask-extension/pull/13726))
-- Fixing blockies on token detail page ([#13728](https://github.com/MetaMask/metamask-extension/pull/13728))
-- fix registerOnboarding method to correctly access completedOnboarding state value ([#13723](https://github.com/MetaMask/metamask-extension/pull/13723))
-- Fix permission screen overflow ([#13592](https://github.com/MetaMask/metamask-extension/pull/13592))
+- Fix cases where the action buttons in a switch network confirmation window wouldn't work  ([#13847](https://github.com/MetaMask/metamask-extension/pull/13847))
+- Ensure the origin of a site requesting permissions is fully visible in the permission request UI ([#13868](https://github.com/MetaMask/metamask-extension/pull/13868))
+- Fix visual overflow problems with the account list in the connect flow
+    - ([#13859](https://github.com/MetaMask/metamask-extension/pull/13859))
+    - ([#13592](https://github.com/MetaMask/metamask-extension/pull/13592))
+- Show the users primary currency in the "Max Base Fee" and "Priority Fee" fields of the gas customization window ([#13830](https://github.com/MetaMask/metamask-extension/pull/13830))
+- Ensure latest gas estimates are shown on the transaction screen for users of the EIP-1559 v2 gas UI ([#13809](https://github.com/MetaMask/metamask-extension/pull/13809))
+- Fix to allow toggling of the currency in the send flow when the user has "fiat" selected as the primary currency ([#13813](https://github.com/MetaMask/metamask-extension/pull/13813))
 - Shows the sign and cancel button fully in signature page ([#13686](https://github.com/MetaMask/metamask-extension/pull/13686))
 
 
