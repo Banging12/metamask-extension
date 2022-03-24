@@ -215,7 +215,7 @@ export default class ConfirmPageContainerContent extends Component {
                   </Typography>
                 }
                 useIcon
-                iconFillColor="#d73a49"
+                iconFillColor="var(--color-error-default)"
                 type="danger"
               />
             ) : (
@@ -228,7 +228,7 @@ export default class ConfirmPageContainerContent extends Component {
                   </Typography>
                 }
                 useIcon
-                iconFillColor="#d73a49"
+                iconFillColor="var(--color-error-default)"
                 type="danger"
               />
             )}

@@ -114,7 +114,7 @@ const AddNetwork = ({
               </a>
             </>
           }
-          iconFillColor="#f8c000"
+          iconFillColor="var(--color-warning-default)"
           useIcon
           withRightButton
         />
